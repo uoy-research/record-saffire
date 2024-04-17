@@ -12,7 +12,7 @@ func listInputs() throws -> [Device] {
 
 func listInputDevices() throws -> [AVAudioSessionPortDescription]? {
   let audioSession = AVAudioSession.sharedInstance()
-  let options: AVAudioSession.CategoryOptions = [.defaultToSpeaker, .allowBluetooth, .MixWithOthers]
+  let options: AVAudioSession.CategoryOptions = [.defaultToSpeaker, .allowBluetooth, .mixWithOthers]
   
   do {
     try audioSession.setCategory(.playAndRecord, options: options)
